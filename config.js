@@ -38,8 +38,9 @@ module.exports = function() {
 		// Img 경로
 		img = {
 			// src : source + '/img/**/*.{gif,jpg,png,ico}',
-			src : source + '/img/**',
-			dest: development + '/public/img'
+			src : source + '/img/!(sprite)*/*',
+			dest: development + '/public/img',
+			src_sprite : source + '/img/sprite/**/*',
 		},
 		
 		// HTML 옵션

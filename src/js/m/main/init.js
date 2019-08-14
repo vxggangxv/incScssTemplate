@@ -2,6 +2,8 @@ $(function() {
     var headerUI = new HeaderUI('.page-main .header', '.floorstatus-count');
 })
 
+// <div onclick="housekeeperPopup.display(true, 'obj-name')"></div>
+
 // function
 var housekeeperPopup = {
     display : function(flag, obj) {

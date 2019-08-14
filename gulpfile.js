@@ -12,6 +12,7 @@ var gulp  = require('gulp'),
 	csso = require('gulp-csso'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
+	spritesmith = require('gulp.spritesmith'),
 	watch     = require('gulp-watch'),
 	htmlbeautify  = require('gulp-html-beautify'),
 	browserSync = require('browser-sync').create(), // browser-sync 호출
@@ -174,4 +175,16 @@ gulp.task('img', function() {
 	return gulp.src(config.img.src)
         .pipe( imagemin() )
 		.pipe( gulp.dest(config.img.dest)) ;
+});
+// image sprite
+gulp.task('sprite', function(){
+    // var spriteData = gulp.src('src/sprite/*.png')
+    var spriteData = gulp.src(config.img.src_sprite)
+    .pipe(spritesmith({
+        imgName: 'sprite.png',
+        padding: 6,
+        cssName: 'init.css'
+    }));
+    spriteData.img.pipe(gulp.dest(config.img.dest + '/sprite'));
+    spriteData.css.pipe(gulp.dest(config.sass.dest + '/sprite'));
 });
