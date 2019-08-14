@@ -8,7 +8,8 @@ var gulp  = require('gulp'),
 	sass	  = require('gulp-sass'),
 	// sourcemaps  = require('gulp-sourcemaps'),
 	autoprefixer  = require('gulp-autoprefixer'),
-	cleanCSS = require('gulp-clean-css'),
+	// cleanCSS = require('gulp-clean-css'),
+	csso = require('gulp-csso'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
 	watch     = require('gulp-watch'),
@@ -148,7 +149,8 @@ gulp.task('sass', function() {
 		// .pipe( sourcemaps.init() )
 		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
 		.pipe( autoprefixer() )
-		.pipe( cleanCSS())
+		.pipe( csso() )
+		// .pipe( cleanCSS() )
 		// .pipe( cleanCSS({compatibility: 'ie8'}) )
 		// .pipe( sourcemaps.write() )
 		.pipe( gulp.dest(config.sass.dest) )
@@ -157,7 +159,8 @@ gulp.task('sass', function() {
 gulp.task('css', function() {
 	return gulp.src(config.css.src)
 		.pipe( autoprefixer() )
-		.pipe( cleanCSS())
+		.pipe( csso() )
+		// .pipe( cleanCSS() )
 		.pipe( rename({suffix: '.min'}) )
 		.pipe( gulp.dest(config.css.dest) )
 		.pipe( browserSync.stream({ match: '**/*.css' }) );
