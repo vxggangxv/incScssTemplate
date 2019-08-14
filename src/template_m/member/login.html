@@ -1,0 +1,41 @@
+@@include('../include/_head.html', {
+	"page": "member"
+})
+
+<body class="page-member">
+
+	<div class="cf cont-login">
+		<div class="login-container">
+			<div class="login-area">
+				<h1 class="h-logo">
+					<a href="../member/login.html">
+						<img src="../../public/img/common/logo_mng.png" alt="고코투어 CMS" class="logo-img">
+						<!-- <span class="txt">HouseKeeper</span> -->
+					</a>
+				</h1>
+				
+				<fieldset class="fid">
+					<legend>로그인</legend>
+					<p class="row">
+						<input type="text" class="inp id" placeholder="UserID" autofocus>
+					</p>
+					<p class="row">
+						<input type="password" class="inp pw" placeholder="Password">
+					</p>
+					<p class="row row-btn">
+						<button type="button" class="btn-login">LOGIN</button>
+					</p>
+				</fieldset>
+
+				<!-- fail 일 경우 -->
+				<!-- <p class="row-cmt">
+					입력하신 아이디가 없거나, 비밀번호가 맞지않습니다.
+				</p> -->
+			</div>
+		</div>
+		
+		@@include('../include/member/_footer.html')
+	</div>
+
+</body>
+</html>

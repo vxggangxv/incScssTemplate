@@ -1,0 +1,44 @@
+@@include('../include/_head.html', {
+	"page": "member"
+})
+
+<body class="page-member">
+
+	<div class="cf cont-forgot cont-forgot-pw">
+		<div class="login-container">
+			<div class="login-area">
+				<h1 class="h-logo">
+					<a href="../member/login.html">
+						<img src="../../public/img/common/logo_mng.png" alt="고코투어 CMS" class="logo-img">
+						<span class="txt">비밀번호 찾기</span>
+					</a>
+				</h1>
+				
+				<fieldset class="fid">
+					<legend>비밀번호 찾기</legend>
+					
+					<p class="row">
+						<input type="text" class="inp id" placeholder="ID">
+					</p>
+					<p class="row">
+						<input type="text" class="inp pw" placeholder="E-mail">
+					</p>
+					<p class="row row-btn">
+						<button type="button" class="btn-login">확인</button>
+					</p>
+				</fidleset>
+				<p class="row-cmt">
+					<span class="txt">아이디가 기억나지 않는다면?</span>
+					<a href="forgot_id.html" class="btn-forgot">
+						<img src="../../public/img/icon/login/user.png" alt="아이디찾기" class="ic">
+						<span class="lbl">아이디 찾기 바로가기</span>
+					</a>
+				</p>
+			</div>
+		</div>
+		
+		@@include('../include/member/_footer.html')
+	</div>
+
+</body>
+</html>

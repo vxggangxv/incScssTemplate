@@ -1,0 +1,40 @@
+@@include('../include/_head.html', {
+	"page": "member"
+})
+
+<body class="page-member">
+
+	<div id="loginW" class="partner">
+		<div class="login">
+			<h1><img src="//img.go.co.kr/go/login_logo.jpg" alt="고코투어"></h1>
+			<div class="cf box">
+				<div class="left">
+					<img src="//img.go.co.kr/go/cmsLogin.jpg" alt="CMS로그인" class="log_img">
+					<p class="log_txt">
+						본 시스템은 바로네트웍스에서 제공해 드리는<br>
+						관리자 전용 시스템이며 사용 허가 후 무료 이용이 가능합니다.<br>
+						계정에 관련한 사항은 관리팀에 문의하여 주십시오
+					</p>
+				</div>
+				<div class="line"></div>
+				<div class="right">
+					<form id="lform">
+						<input type="hidden" name="mode" value="login">
+						<input type="text" name="id" class="form-controlh" placeholder="아이디" title="아이디">
+						<input type="password" name="pw" class="form-controlh" placeholder="비밀번호" title="비밀번호" onkeypress="if(event.keyCode == 13) { login(); event.returnValue=false; }">
+						<div class="login_btn" onclick="login();">로그인</div>
+						<label for="auto"><input type="checkbox" id="auto" name="auto" value="Y"> ID저장</label>
+					</form>
+				</div>
+			</div>
+			<div class="txt">
+				<a href="//www.go.co.kr" target="_blank"><img src="//img.go.co.kr/go/goco_bt2.gif" alt="고코투어바로가기"></a>
+			</div>
+		</div>
+	</div>
+	<!-- // #loginW -->
+
+</div>
+
+</body>
+</html>

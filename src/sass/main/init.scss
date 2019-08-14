@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+@import '../parts/common';
+
+$wrapper-max-wd: null;
+.page-main {
+    font-family: $font-stack;
+    color: $font-color;
+    line-height: 1;
+}
+
+.page-main {
+    @include media("(min-width: 768px)") {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+}
+
+.page-main {
+    position: relative;
+    max-width: $wrapper-max-wd;
+    margin: 0 auto;
+    // border-left: 1px solid #ddd;
+    // border-right: 1px solid #ddd;
+    // overflow: hidden;
+}
+
+/* 스크롤 이동시 트랜지션 */
+.page-main {
+    .header,
+    .floorstatus-count {
+        max-width: $wrapper-max-wd;
+        transition: all 0.8s;
+    }
+
+}
+
+.page-main.affix {
+    .header,
+    .floorstatus-count {
+        @include pos(fixed, 0);
+        z-index: 10;
+    }
+    .header {
+        z-index: 11;
+    }
+    /* 스크롤 높이 오버시 */
+    .header.over, 
+    .floorstatus-count.over {
+        box-shadow: 0 4px 8px rgba(0,0,0, .08);
+    }
+}
+
+/* 해더 영역 */
+.page-main .header {
+    background-color: #fff;
+    width: 100%;
+    .cont-header {
+        border-bottom: 1px solid #ddd;
+        .sta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            .btn-group,
+            .ulevel {
+                width: 100px;
+            }
+            .btn-allSts {
+                // @include pos(absolute, 5px, 10px);
+            }
+            .logo-a {
+                .logo-img {
+                    width: 100px;
+                }
+            }
+            .ulevel {
+                position: relative;
+                padding-right: 5px;
+                box-sizing: border-box;
+                font-size: 13px;
+                color: #888;
+                text-align: right;
+            }
+        }
+    }
+}

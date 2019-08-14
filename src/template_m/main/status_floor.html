@@ -1,0 +1,192 @@
+@@include('../include/_head.html', {
+	"page": "main"
+})
+
+<body class="page-main">
+
+<div class="wrapper">
+    @@include('../include/main/_header.html')
+
+    <div class="cf contents floorstatus-contents">
+        <div class="contents-container">
+            <section class="sec floorstatus-sec">
+                <h1 class="skip">층별현황</h1>
+                <div class="floorstatus-count">
+                    <div class="floorstatus-count-container">
+                        <!-- 관리자 로그인 시 Oo, Os 노출 -->
+                        <div class="floorstatus-count-no">
+                            <span class="item">총 수<br>12</span> <span class="dot">|</span> <span class="item">Ins<br>2</span> <span class="dot">|</span> <span class="item">Dirty<br>3</span> <span class="dot">|</span> <span class="item">Work<br>4</span> <span class="dot">|</span> <span class="item">Cln<br>1</span> <span class="dot">|</span> <span class="item">Oo<br>1</span> <span class="dot">|</span> <span class="item">Os<br>1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floorstatus-count">
+                    <div class="floorstatus-count-container">
+                        <!-- 관리자 로그인 시 Oo, Os 노출 -->
+                        <div class="floorstatus-count-no">
+                            <span class="item">총 수<br>12</span> <span class="dot">|</span> <span class="item">Ins<br>2</span> <span class="dot">|</span> <span class="item">Dirty<br>3</span> <span class="dot">|</span> <span class="item">Work<br>4</span> <span class="dot">|</span> <span class="item">Cln<br>1</span> <span class="dot">|</span> <span class="item">Oo<br>1</span> <span class="dot">|</span> <span class="item">Os<br>1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floorstatus-listbox">
+                    <ul class="floorstatus-list">
+                        <li>
+                            <div class="roombox inspect" data-roomchk="inhouse">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1203호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">InHouse</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">inspect</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                    <!-- 메모 있을 경우 표시 -->
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-read')">알림 <span class="badge">5</span></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox dirty" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1204호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">dirty</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox clean" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1205호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">clean</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox working" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">working</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox ooo" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">o.o.o</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    @@include('../include/main/_footer.html')
+</div>
+
+<div class="popup-layer">
+    <!-- 방 상태 변경 -->
+    <div class="popup-mask type-1" data-target="rmstatus" style="display: none;">
+        <div class="popup-wrapper rmstatus-wrapper">
+            <div class="popup-container">
+                <div class="popup-header"><h2 class="popup-title">1203호 상태설정</h2></div>
+                <div class="popup-body">
+                    <div class="rmstatus-listbox">
+                        <ul class="rmstatus-list">
+                            <!-- 관리자의 경우만 inspect, ooo, oos 노출 -->
+                            <li><button type="button" class="btn btn-green lg btn-status">inspect</button></li>
+                            <li><button type="button" class="btn btn-blue lg btn-status">clean</button></li>
+                            <li><button type="button" class="btn btn-orange lg btn-status">working</button></li>
+                            <li><button type="button" class="btn btn-red lg btn-status">dirty</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of order</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of service</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn lg btn-ok">확인</button>
+                        <button type="button" class="btn lg btn-cancel" onclick="housekeeperPopup.display(false, 'rmstatus')">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메모 글쓰기 -->
+    <div class="popup-mask type-1" data-target="memo-write" style="display: none;">
+        <div class="popup-wrapper memo-wrapper write">
+            <div class="popup-container">
+                <div class="popup-header"><h2 class="popup-title">메모쓰기</h2></div>
+                <div class="popup-body">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="메모를 입력해주세요." class="writebox"></textarea>
+                </div>
+                <div class="popup-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn lg btn-ok">확인</button>
+                        <button type="button" class="btn lg btn-cancel" onclick="housekeeperPopup.display(false, 'memo-write')">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메모 쓴 글 보기 -->
+    <div class="popup-mask type-1" data-target="memo-read" style="display: none;">
+        <div class="popup-wrapper memo-wrapper read">
+            <div class="popup-container">
+                <div class="popup-header"><h2 class="popup-title">메모읽기</h2></div>
+                <div class="popup-body">
+                    <div class="textbox">Lorem ipsum dolor sit amet consectetur, nostrum voluptate corrupti aut omnis pariatur sit iure excepturi aliquam. Similique, tenetur?</div>
+                    <div class="textbox">메모 내용 2</div>
+                </div>
+                <div class="popup-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn lg btn-ok">확인</button>
+                        <button type="button" class="btn lg btn-cancel" onclick="housekeeperPopup.display(false, 'memo-read')">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+    });
+</script>
+
+</body>
+</html>
